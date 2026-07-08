@@ -55,7 +55,7 @@ for (const viewportName of viewportNames) {
   test.describe(`${viewportName} (${viewport.width}x${viewport.height})`, () => {
     test.beforeEach(async ({ page }) => {
       await page.setViewportSize(viewport);
-      await page.goto("/", { waitUntil: "networkidle" });
+      await page.goto("/", { waitUntil: "domcontentloaded" });
       // Allow scroll-reveal animations to settle
       await page.waitForTimeout(800);
     });

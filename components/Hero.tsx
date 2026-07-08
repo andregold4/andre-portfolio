@@ -1,13 +1,20 @@
 "use client";
 
+import { useRef } from "react";
 import { motion } from "framer-motion";
+import ProfilePhoto from "./ProfilePhoto";
 
 const RESUME_MAILTO =
   "mailto:andregoldberg42@gmail.com?subject=Resume%20Request&body=Hi%20Andre%2C%0A%0AI%E2%80%99d%20love%20to%20request%20a%20copy%20of%20your%20resume.%0A%0AThank%20you!";
 
 export default function Hero() {
+  const heroRef = useRef<HTMLElement>(null);
+
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden px-6 pt-[120px] pb-20">
+    <section
+      ref={heroRef}
+      className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden px-6 pt-[120px] pb-20"
+    >
       {/* Animated gradient backgrounds — clipped to section bounds */}
       <div
         className="absolute inset-0 overflow-hidden pointer-events-none"
@@ -58,6 +65,8 @@ export default function Hero() {
             Currently building at Chaos Labs
           </span>
         </motion.div>
+
+        <ProfilePhoto heroRef={heroRef} />
 
         {/* Name */}
         <motion.h1

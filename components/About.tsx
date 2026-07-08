@@ -2,7 +2,10 @@ import RevealOnScroll from "./RevealOnScroll";
 
 export default function About() {
   return (
-    <section id="about" className="py-20 sm:py-24 px-6 max-w-[800px] mx-auto">
+    <section
+      id="about"
+      className="py-20 sm:py-24 px-6 max-w-[800px] mx-auto overflow-hidden"
+    >
       <RevealOnScroll className="flex flex-col gap-12">
         <div className="flex flex-col gap-4">
           <span
