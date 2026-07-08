@@ -103,9 +103,9 @@ function CardItem({ card }: { card: LearningCard }) {
 
 export default function Learning() {
   return (
-    <section id="learning" className="py-20 px-6 max-w-[860px] mx-auto relative">
+    <section id="learning" className="py-20 px-6 max-w-[860px] mx-auto relative overflow-hidden">
       <div
-        className="absolute -inset-x-[200px] -inset-y-10 pointer-events-none"
+        className="absolute inset-0 -inset-y-10 pointer-events-none"
         style={{
           background:
             "radial-gradient(ellipse 50% 40% at 50% 50%, rgba(45, 106, 231, 0.03) 0%, transparent 70%)",

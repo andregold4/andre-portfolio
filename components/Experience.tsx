@@ -37,7 +37,7 @@ export default function Experience() {
           />
 
           {/* Chaos Labs */}
-          <RevealOnScroll className="flex gap-8 py-6 relative">
+          <RevealOnScroll className="flex gap-4 sm:gap-8 py-6 relative">
             <div className="flex-shrink-0 flex flex-col items-center gap-1 pt-1">
               <div
                 className="w-6 h-6 rounded-full flex items-center justify-center relative z-10"
@@ -107,7 +107,7 @@ export default function Experience() {
           </RevealOnScroll>
 
           {/* Verto */}
-          <RevealOnScroll className="flex gap-8 py-6 relative" delay={0.15}>
+          <RevealOnScroll className="flex gap-4 sm:gap-8 py-6 relative" delay={0.15}>
             <div className="flex-shrink-0 flex flex-col items-center gap-1 pt-1">
               <div
                 className="w-6 h-6 rounded-full flex items-center justify-center relative z-10 border"

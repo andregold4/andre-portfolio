@@ -8,28 +8,33 @@ const RESUME_MAILTO =
 export default function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center relative overflow-hidden px-6 pt-[120px] pb-20">
-      {/* Animated gradient backgrounds */}
+      {/* Animated gradient backgrounds — clipped to section bounds */}
       <div
-        className="absolute inset-0 animate-[pulse-glow_8s_ease-in-out_infinite]"
-        style={{
-          background:
-            "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(45, 106, 231, 0.08) 0%, transparent 70%)",
-        }}
-      />
-      <div
-        className="absolute -top-[20%] -right-[10%] w-[600px] h-[600px] blur-[60px]"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(45, 106, 231, 0.05) 0%, transparent 70%)",
-        }}
-      />
-      <div
-        className="absolute -bottom-[10%] -left-[5%] w-[400px] h-[400px] blur-[40px]"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(45, 106, 231, 0.03) 0%, transparent 70%)",
-        }}
-      />
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+        aria-hidden="true"
+      >
+        <div
+          className="absolute inset-0 animate-[pulse-glow_8s_ease-in-out_infinite]"
+          style={{
+            background:
+              "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(45, 106, 231, 0.08) 0%, transparent 70%)",
+          }}
+        />
+        <div
+          className="absolute -top-[20%] -right-[10%] w-[min(600px,80vw)] h-[min(600px,80vw)] blur-[60px]"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(45, 106, 231, 0.05) 0%, transparent 70%)",
+          }}
+        />
+        <div
+          className="absolute -bottom-[10%] -left-[5%] w-[min(400px,70vw)] h-[min(400px,70vw)] blur-[40px]"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(45, 106, 231, 0.03) 0%, transparent 70%)",
+          }}
+        />
+      </div>
 
       <div className="relative z-10 max-w-[720px] text-center flex flex-col items-center gap-6">
         {/* Status line */}

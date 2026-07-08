@@ -29,7 +29,7 @@ export default function Education() {
           {/* Syracuse */}
           <RevealOnScroll>
             <div
-              className="flex gap-6 p-7 rounded-xl border"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6 p-5 sm:p-7 rounded-xl border"
               style={{
                 background: "var(--card)",
                 borderColor: "var(--border)",
@@ -97,7 +97,7 @@ export default function Education() {
           {/* Verto */}
           <RevealOnScroll delay={0.1}>
             <div
-              className="flex gap-6 p-7 rounded-xl border"
+              className="flex flex-col sm:flex-row gap-4 sm:gap-6 p-5 sm:p-7 rounded-xl border"
               style={{
                 background: "var(--card)",
                 borderColor: "var(--border)",

@@ -51,7 +51,7 @@ const variantStyles = {
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 px-6 relative">
+    <section id="contact" className="py-20 px-6 relative overflow-hidden">
       <div
         className="absolute inset-0 pointer-events-none"
         style={{

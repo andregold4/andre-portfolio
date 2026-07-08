@@ -32,6 +32,7 @@ export default function RevealOnScroll({
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       transition={{ duration: 0.7, ease: "easeOut", delay }}
+      style={{ willChange: "transform, opacity" }}
     >
       {children}
     </motion.div>
