@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef, type ReactNode } from "react";
-import { motion, useInView, type Variant } from "framer-motion";
+import { useRef, type ReactNode } from "react";
+import { motion, useInView } from "framer-motion";
 
 interface RevealOnScrollProps {
   children: ReactNode;
@@ -10,8 +10,10 @@ interface RevealOnScrollProps {
   once?: boolean;
 }
 
-const hidden: Variant = { opacity: 0, y: 24 };
-const visible: Variant = { opacity: 1, y: 0 };
+const variants = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0 },
+} as const;
 
 export default function RevealOnScroll({
   children,
@@ -26,8 +28,9 @@ export default function RevealOnScroll({
     <motion.div
       ref={ref}
       className={className}
-      initial={hidden}
-      animate={isInView ? visible : hidden}
+      variants={variants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
       transition={{ duration: 0.7, ease: "easeOut", delay }}
     >
       {children}
